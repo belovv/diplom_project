@@ -6,6 +6,7 @@ import org.openqa.selenium.TakesScreenshot;
 import java.nio.charset.StandardCharsets;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static com.wallet.config.ConfigProvider.getWebRemoteDriverUrl;
 
 public class AttachmentsHelper {
     @Attachment(value = "{attachName}", type = "text/plain")
@@ -35,6 +36,8 @@ public class AttachmentsHelper {
     }
 
     public static String getWebVideoUrl(String sessionId) {
-        return "https://" + System.getProperty("remote.browser.url") + "/video/" + sessionId + ".mp4";
+        return "https://" + getWebRemoteDriverUrl() + "/video/" + sessionId + ".mp4";
+
+
     }
 }

@@ -16,8 +16,13 @@ public class ConfigProvider {
         return getWebConfig().webBrowserScreenResolution();
     }
 
-    public static String getWebRemoteBrowser(){
-        return getWebConfig().webRemoteBrowser();
+    public static String getWebRemoteDriverUrl(){
+        return getWebConfig().webRemoteDriverUrl();
+    }
+
+    public static String getWebRemoteDriver(){
+        return "https://" + getWebConfig().webRemoteDriverUser() + ":" + getWebConfig().webRemoteDriverPassword() +
+               "@" +  getWebRemoteDriverUrl() + ":4444/wd/hub/";
     }
 
      private static WebConfig getWebConfig() {

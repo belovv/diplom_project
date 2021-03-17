@@ -20,10 +20,10 @@ public class DriverHelper {
             Configuration.baseUrl = getWebUrl();
             Configuration.browserSize = getWebBrowserScreenResolution();
             Configuration.timeout = 5000;
-            Configuration.remote = getWebRemoteBrowser();
+            Configuration.remote = getWebRemoteDriver();
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
-            capabilities.setCapability("enableVideo", false);
+            capabilities.setCapability("enableVideo", true);
             Configuration.browserCapabilities = capabilities;
         }
 
