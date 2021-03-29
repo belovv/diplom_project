@@ -1,5 +1,6 @@
 package com.wallet;
 
+import com.wallet.annotations.Microservice;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -10,9 +11,10 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-@Tag("web")
+@Tag("UI")
 public class MainPageTest extends BaseTest {
 
+    @Tag("web")
     @DisplayName("Кликаем бесплатные курсы")
     @Test
     public void openMainPage() {
@@ -30,7 +32,7 @@ public class MainPageTest extends BaseTest {
         });
 
     }
-
+    @Microservice("Repository")
     @DisplayName("Выбираем курс 'егэ'")
     @Test
     public void buyDemoItem() {
