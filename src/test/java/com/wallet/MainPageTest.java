@@ -11,9 +11,9 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-@Tag("UI")
-public class MainPageTest extends BaseTest {
 
+public class MainPageTest extends BaseTest {
+   // @Layer("UI")
     @Tag("web")
     @DisplayName("Кликаем бесплатные курсы")
     @Test
