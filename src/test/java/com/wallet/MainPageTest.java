@@ -1,5 +1,6 @@
 package com.wallet;
 
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -41,7 +42,7 @@ public class MainPageTest extends BaseTest {
             $("div .header-ege__title").shouldHave(text("Онлайн-курсы подготовки к ЕГЭ"));
         });
     }
-
+    @Owner("Belov")
     @DisplayName("входим в личный кабинет")
     @Test
     public void clickOnSign() {
@@ -53,6 +54,7 @@ public class MainPageTest extends BaseTest {
         });
     }
 
+    @Owner("Vasil")
     @DisplayName("Идем в магазин")
     @Test
     public void clickOnRegistration() {

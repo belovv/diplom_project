@@ -23,7 +23,7 @@ public class DriverHelper {
             Configuration.remote = getWebRemoteDriver();
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
-            capabilities.setCapability("enableVideo", true);
+            capabilities.setCapability("enableVideo", false);
             Configuration.browserCapabilities = capabilities;
         }
 
