@@ -1,7 +1,8 @@
-package com.wallet;
+package com.automationpractice;
 
-import com.wallet.annotations.Layer;
-import com.wallet.annotations.Microservice;
+import com.automationpractice.annotations.Layer;
+import com.automationpractice.annotations.Microservice;
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -66,6 +67,26 @@ public class MainPageTest extends BaseTest {
             $("a.icon-store svg").click();
             switchTo().window(1);
             $(".top-menu__item--store").shouldHave(exactText("Магазин"));
+        });
+    }
+
+
+    @AllureId("2078")
+    @DisplayName("Ищем товар в поиске")
+    @Tag("web")
+    @Microservice("Search")
+    @Owner("VasilyBelov")
+    @Test
+    public void search() {
+        step("Открываем главную страницу", (step) -> {
+            open("/");
+        });
+        step("Набираем в поиске t-shirt  нажимаем искать", (step)->{
+            $("#search_query_top").setValue("t-shirt");
+            $("button[name='submit_search']").click();
+                });
+        step("Проверяем что в результатах есть t-short", (step) -> {
+            $("div .product-container").shouldHave(text("t-shirts"));
         });
     }
 

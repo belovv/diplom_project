@@ -1,4 +1,4 @@
-package com.wallet.annotations;
+package com.automationpractice.annotations;
 
 
 import io.qameta.allure.LabelAnnotation;

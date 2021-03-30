@@ -1,4 +1,4 @@
-package com.wallet.config;
+package com.automationpractice.config;
 
 import org.aeonbits.owner.Config;
 

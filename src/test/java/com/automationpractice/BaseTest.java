@@ -1,7 +1,7 @@
-package com.wallet;
+package com.automationpractice;
 
-import com.wallet.helpers.AttachmentsHelper;
-import com.wallet.helpers.DriverHelper;
+import com.automationpractice.helpers.AttachmentsHelper;
+import com.automationpractice.helpers.DriverHelper;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 
