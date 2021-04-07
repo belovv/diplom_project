@@ -48,8 +48,9 @@ public class MainPageTest extends BaseTest {
         open("/");
         step("добавляем товар в корзину", (step) -> {
             String itemName = $("div.product-container .product-name").getText();
+            $("div.product-container").hover();
+            $("a[title='Add to cart'] span").click();
             $("#layer_cart_product_title").shouldHave(exactText(itemName));
-            $("div.product-container [title='Add to cart']").click();
         });
         step("Нажимаем на продолжить покупки", (step) -> {
             $(".layer_cart_cart .continue").click();
