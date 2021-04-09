@@ -7,4 +7,4 @@ gradlew.bat
 settings.gradle
 .allure
 build/
-web.properties
+src/main/resources
